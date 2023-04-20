@@ -12,6 +12,7 @@
   --danger: #ef2004;
 
   --headerheight: 70px;
+  --navheight: 40px;
   --footerheight: 40px;
 }
 
@@ -23,14 +24,24 @@
 
 body{
   font-family: 'Raleway', sans-serif;
+  color: var(--dark);
 }
 
 header{
   height: var(--headerheight);
 }
 
+header > p{
+  font-size: 2rem;
+}
+
+a{
+  text-decoration: none;
+  color: var(--dark);
+}
+
 main{
-  height: calc(100vh - (var(--headerheight) + var(--footerheight)));
+  height: calc(100vh - (var(--headerheight) + var(--footerheight) + var(--navheight)));
 }
 
 footer{
@@ -43,6 +54,26 @@ footer{
   align-items: center;
   justify-content: center;
   width: 100%;
+}
+
+.nav-menu{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--navheight);
+  list-style: none;
+  padding: 0 20px;
+  background-color: var(--light);
+}
+
+.nav-li{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav-li > *{
+  padding: 0 10px;
 }
 
 .bg-dark{
