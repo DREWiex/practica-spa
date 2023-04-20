@@ -1,6 +1,7 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { LoginPage } from './auth/pages/LoginPage';
 import { BrowserPage, FurniturePage, GroceriesPage, HomePage, MotorcyclePage, ProductsPage } from './products/pages';
+import { NavBar } from './components/NavBar';
 
 function App() {
 
@@ -11,6 +12,8 @@ function App() {
     <header className="flex bg-dark">
       <p>Práctica SPA</p>
     </header>
+
+    <NavBar />
 
     <main className="flex">
 
