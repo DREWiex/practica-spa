@@ -1,3 +1,4 @@
+import { Home } from "../components/Home";
 
 export const HomePage = () => {
 
@@ -7,6 +8,8 @@ export const HomePage = () => {
         <>
 
             <h1>Home</h1>
+
+            <Home />
 
         </>
 
