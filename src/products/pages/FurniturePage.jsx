@@ -1,4 +1,4 @@
-import { Furniture } from '../components/Furniture';
+import { Furniture } from '../components';
 
 export const FurniturePage = () => {
 

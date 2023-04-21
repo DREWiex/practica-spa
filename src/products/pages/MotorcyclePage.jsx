@@ -1,4 +1,4 @@
-import { Motorcycle } from '../components/Motorcycle';
+import { Motorcycle } from '../components';
 
 export const MotorcyclePage = () => {
 

@@ -1,6 +1,8 @@
 
 export const dummyFetch = async (category) => {
 
+    console.log(category)
+
     try {
 
         const request = await fetch(`https://dummyjson.com/products/category/${category}`, {
@@ -9,18 +11,11 @@ export const dummyFetch = async (category) => {
             cache: 'force-cache'
         });
 
-        if(request.total > 0){
+        if(request){
 
             const response = await request.json();
 
             return response;
-
-        } else {
-
-            throw{
-                ok: false,
-                msg: 'No se encontraron productos.'
-            };
 
         };
         
