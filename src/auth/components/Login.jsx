@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { useForm } from "../../hooks/useForm";
+import { UserContext } from "../context/UserContext";
+import { Navigate } from "react-router-dom";
 
 export const Login = () => {
 
     const { handleChange } = useForm();
+
+    const { user, setUser } = useContext(UserContext);
 
 
     const handleSubmit = (ev) => {
@@ -12,14 +17,14 @@ export const Login = () => {
         const username = ev.target.username.value;
         const password = ev.target.username.value;
 
-        const user = {
+        const loggedUser = {
             id: Date.now(),
             username,
             password,
             auth: true
         };
 
-        
+        setUser(loggedUser);
 
     };
 
@@ -28,9 +33,9 @@ export const Login = () => {
 
         <>
 
-            {/* {
-                user.username != undefined && (<Navigate to='products' />)
-            } */}
+            {
+                user.username != undefined && (<Navigate to='/products' />)
+            }
 
             <form onSubmit={handleSubmit}>
 
