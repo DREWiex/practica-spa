@@ -1,8 +1,6 @@
 
 export const dummyFetch = async (category) => {
 
-    console.log(category)
-
     try {
 
         const request = await fetch(`https://dummyjson.com/products/category/${category}`, {

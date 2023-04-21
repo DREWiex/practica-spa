@@ -1,3 +1,4 @@
+import { GridProducts } from "./GridProducts";
 
 export const Motorcycle = () => {
 
@@ -6,9 +7,7 @@ export const Motorcycle = () => {
 
         <>
 
-            <section>
-                Motorcycle section
-            </section>
+            <GridProducts category={'motorcycle'} />
 
         </>
 

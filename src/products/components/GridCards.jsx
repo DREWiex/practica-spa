@@ -7,14 +7,16 @@ export const GridCards = ({ category }) => {
 
     return (
 
-        <>
+        <section>
+
             {
                 products.map(product => (
                     <Cards {...product} key={product.id} />
                 ))
 
             };
-        </>
+            
+        </section>
 
     );
 
