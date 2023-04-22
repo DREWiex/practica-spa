@@ -1,4 +1,4 @@
-import { GridProducts } from "./GridProducts";
+import { GridCards } from "./GridCards";
 
 export const Furniture = () => {
 
@@ -7,7 +7,7 @@ export const Furniture = () => {
 
         <>
 
-            <GridProducts category={'furniture'} />
+            <GridCards category={'furniture'} />
 
         </>
 
