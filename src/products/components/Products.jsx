@@ -6,6 +6,8 @@ export const Products = () => {
 
         <>
 
+            <h1>Products</h1>
+
             <section>
                 Products section
             </section>

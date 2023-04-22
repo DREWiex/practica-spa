@@ -7,11 +7,13 @@ export const Furniture = () => {
     const category = 'furniture';
 
     const { pathname } = useLocation();
-    
+
 
     return (
 
         <>
+
+            <h1> Furniture </h1>
 
             {
                 pathname == `/${category}` ? (<GridCards category={category} />) : (<ProductDetail category={category} />)

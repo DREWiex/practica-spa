@@ -13,6 +13,8 @@ export const Groceries = () => {
 
         <>
 
+            <h1> Groceries </h1>
+
             {
                 pathname == `/${category}` ? (<GridCards category={category} />) : (<ProductDetail category={category} />)
             }

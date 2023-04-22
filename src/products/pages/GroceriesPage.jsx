@@ -7,8 +7,6 @@ export const GroceriesPage = () => {
 
         <>
 
-            <h1>Groceries</h1>
-
             <Groceries />
 
         </>
