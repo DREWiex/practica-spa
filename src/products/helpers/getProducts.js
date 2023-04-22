@@ -1,10 +1,12 @@
 import { dummyFetch } from '../api/dummyFetch';
 
-export const getProducts = async (category, id) => {
+export const getProducts = async (url, category) => {
 
-  const response = await dummyFetch(category, id);
+  const response = await dummyFetch(url, category);
 
   const { products } = response; // destructuro la respuesta para poder iterar con el map() en el else
+
+  //console.log(category.length > 0);
 
   if (!category) {
 

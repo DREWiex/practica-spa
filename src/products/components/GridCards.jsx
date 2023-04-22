@@ -3,7 +3,9 @@ import { Cards } from "./Cards";
 
 export const GridCards = ({ category }) => {
 
-    const { products } = useFetchProducts(category);
+    let url = `https://dummyjson.com/products/category/${category}`;
+
+    const { products } = useFetchProducts(url, category);
 
     
     return (
