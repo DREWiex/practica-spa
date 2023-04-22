@@ -10,7 +10,8 @@ export const getProducts = async (category) => {
         description: item.description,
         photo: item.thumbnail,
         price: item.price,
-        rating: item.rating
+        rating: item.rating,
+        category,
     }));
 
   return product;

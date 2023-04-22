@@ -1,9 +1,16 @@
 
-export const dummyFetch = async (category) => {
+export const dummyFetch = async (category, id) => {
+
+    let url;
+
+    if(category) url = `https://dummyjson.com/products/category/${category}`;
+
+    if(id) url = `https://dummyjson.com/products/${id}`;
+
 
     try {
 
-        const request = await fetch(`https://dummyjson.com/products/category/${category}`, {
+        const request = await fetch(url, {
             method: 'get',
             mode: 'cors',
             cache: 'force-cache'
