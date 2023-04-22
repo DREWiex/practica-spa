@@ -4,7 +4,6 @@ import { BrowserPage, FurniturePage, GroceriesPage, HomePage, MotorcyclePage, Pr
 
 export const AppRouters = () => {
 
-    
 
     return (
 

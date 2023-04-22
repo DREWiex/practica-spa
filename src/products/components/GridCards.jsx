@@ -5,6 +5,7 @@ export const GridCards = ({ category }) => {
 
     const { products } = useFetchProducts(category);
 
+    
     return (
 
         <section className="grid-container">

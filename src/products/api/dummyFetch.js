@@ -3,9 +3,8 @@ export const dummyFetch = async (category, id) => {
 
     let url;
 
-    if(category) url = `https://dummyjson.com/products/category/${category}`;
-
-    if(id) url = `https://dummyjson.com/products/${id}`;
+    // si 'category' es 'null', la url es para la pdp; en caso contrario, es para la página de la categoría
+    !category ? url = `https://dummyjson.com/products/${id}` : url = `https://dummyjson.com/products/category/${category}`;
 
 
     try {
