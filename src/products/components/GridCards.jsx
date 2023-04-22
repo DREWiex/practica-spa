@@ -5,6 +5,7 @@ export const GridCards = ({ category }) => {
 
     const { products } = useFetchProducts(category);
 
+    
     return (
 
         <section className="grid-container">
@@ -13,8 +14,7 @@ export const GridCards = ({ category }) => {
                 products.map(product => (
                     <Cards {...product} key={product.id} />
                 ))
-
-            };
+            }
             
         </section>
 

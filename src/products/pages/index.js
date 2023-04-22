@@ -4,3 +4,4 @@ export * from './GroceriesPage';
 export * from './FurniturePage';
 export * from './MotorcyclePage';
 export * from './BrowserPage';
+export * from './ProductDetailPage';

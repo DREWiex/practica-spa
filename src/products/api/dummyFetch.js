@@ -1,9 +1,15 @@
 
-export const dummyFetch = async (category) => {
+export const dummyFetch = async (category, id) => {
+
+    let url;
+
+    // si 'category' es 'null', la url es para la pdp; en caso contrario, es para la página de la categoría
+    !category ? url = `https://dummyjson.com/products/${id}` : url = `https://dummyjson.com/products/category/${category}`;
+
 
     try {
 
-        const request = await fetch(`https://dummyjson.com/products/category/${category}`, {
+        const request = await fetch(url, {
             method: 'get',
             mode: 'cors',
             cache: 'force-cache'

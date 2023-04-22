@@ -1,13 +1,21 @@
-import { GridProducts } from "./GridProducts";
+import { GridCards } from "./GridCards";
+import { ProductDetail } from "./ProductDetail";
+import { useLocation } from 'react-router-dom';
 
 export const Furniture = () => {
 
+    const category = 'furniture';
+
+    const { pathname } = useLocation();
+    
 
     return (
 
         <>
 
-            <GridProducts category={'furniture'} />
+            {
+                pathname == `/${category}` ? (<GridCards category={category} />) : (<ProductDetail category={category} />)
+            }
 
         </>
 
