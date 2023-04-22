@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 
 export const Cards = (product) => {
 
@@ -16,7 +17,7 @@ export const Cards = (product) => {
             <img src={photo} alt={title} title={title} />
         </div>
         <p> Precio: {price.toLocaleString('de-DE')} € </p>
-        <button> Más info </button>
+        <button><Link to={`/product/${id}`}> Más info </Link></button>
     </article>
 
   );
