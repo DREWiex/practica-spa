@@ -7,7 +7,7 @@ export const GridCards = ({ category }) => {
 
     return (
 
-        <section>
+        <section className="grid-container">
 
             {
                 products.map(product => (

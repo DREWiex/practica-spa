@@ -41,7 +41,19 @@ a{
 }
 
 main{
-  height: calc(100vh - (var(--headerheight) + var(--footerheight) + var(--navheight)));
+  min-height: calc(100vh - (var(--headerheight) + var(--footerheight) + var(--navheight)));
+}
+
+h1{
+  margin: 20px 0;
+}
+
+article > button{
+  width: 100%;
+}
+
+img{
+  width: 100%;
 }
 
 footer{
@@ -55,6 +67,8 @@ footer{
   justify-content: center;
   width: 100%;
 }
+
+/* NAV *************************/
 
 .nav-menu{
   display: flex;
@@ -74,6 +88,27 @@ footer{
 
 .nav-li > *{
   padding: 0 10px;
+}
+
+/* CARDS *************************/
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  height: calc(100% - (var(--headerheight) + var(--navheight)));
+  width: 80%;
+  margin: 0 auto;
+}
+
+.grid-container > article{
+    padding: 20px;
+    margin: 0 auto 40px;
+    border: 1px solid var(--light);
+}
+
+.grid-container article > *{
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
 .bg-dark{

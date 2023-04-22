@@ -15,7 +15,8 @@ export const Cards = (product) => {
         <div>
             <img src={photo} alt={title} title={title} />
         </div>
-        <p> {price} </p>
+        <p> Precio: {price.toLocaleString('de-DE')} € </p>
+        <button> Más info </button>
     </article>
 
   );
