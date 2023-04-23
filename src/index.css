@@ -2,7 +2,7 @@
 
 :root{
   --white: #ffffff;
-  --light: #b0d6e1;
+  --light: #edebeb;
   --dark: #1a212a;
   --primary: #342fc2;
   --secondary: #a0353f;
@@ -21,6 +21,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+
+/* ELEMENTOS *************************/
 
 body{
   font-family: 'Raleway', sans-serif;
@@ -50,6 +53,15 @@ h1{
 
 article > button{
   width: 100%;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+button > a{
+  color: var(--white);
 }
 
 img{
@@ -60,13 +72,6 @@ footer{
   height: var(--footerheight);
 }
 
-.flex{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
 
 /* NAV *************************/
 
@@ -90,6 +95,7 @@ footer{
   padding: 0 10px;
 }
 
+
 /* CARDS *************************/
 
 .grid-container{
@@ -104,6 +110,7 @@ footer{
     padding: 20px;
     margin: 0 auto 40px;
     border: 1px solid var(--light);
+    border-radius: 3px;
 }
 
 .grid-container article > *{
@@ -111,7 +118,53 @@ footer{
     margin-bottom: 5px;
 }
 
+
+/* CLASES COMPARTIDAS *************************/
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
 .bg-dark{
   color: var(--white);
   background-color: var(--dark);
 }
+
+.text-center{
+  text-align: center;
+}
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+
+
+} /* 768px end */
+
+
+/* 992px *************************/
+
+@media screen and (min-width:992px) {
+
+
+
+} /* 992px end */
+
+
+/* 1200px *************************/
+
+@media screen and (min-width:1200px) {
+
+
+
+} /* 1200px end */
