@@ -67,7 +67,7 @@ export const Cards = (product) => {
       {
         pathname == `/browser` &&
 
-        <article id={id} className='red'>
+        <article id={id} className='flex-results'>
           <h3 className='text-center'> {title} </h3>
           <div>
             <img src={photo} alt={title} title={title} />

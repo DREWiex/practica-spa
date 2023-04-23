@@ -13,9 +13,13 @@ export const Browser = () => {
 
             <h1>Browser</h1>
 
-            <BrowserForm setSearch={setSearch} />
+            <div className="flex">
 
-            <BrowserResults search={search} />
+                <BrowserForm setSearch={setSearch} />
+
+                <BrowserResults search={search} />
+
+            </div>
 
         </>
 

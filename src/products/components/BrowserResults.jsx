@@ -15,7 +15,7 @@ export const BrowserResults = ({ search }) => {
 
     <>
 
-      <section className="flex-browser blue">
+      <section className="flex-browser">
 
         <h2>Results</h2>
 
