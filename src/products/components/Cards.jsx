@@ -32,7 +32,7 @@ export const Cards = (product) => {
           </div>
           <p> Price: {price.toLocaleString('de-DE')} € </p>
           <button data-category={category}>
-            <Link to={`/product/${id}`}> More info </Link>
+            <Link to={`/products/${category}/${id}`}> More info </Link>
           </button>
         </article>
       }
@@ -46,7 +46,7 @@ export const Cards = (product) => {
           </div>
           <h3> {title} </h3>
           <p> {description} </p>
-          <p> Price: {price} € </p>
+          <p> Price: {price} € </p> //! pendiente añadir .toLocaleString('de-DE')
           <p> Rating: {rating} </p>
         </article>
       }

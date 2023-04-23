@@ -6,7 +6,10 @@ export const Groceries = () => {
 
     const category = 'groceries';
 
-    const { pathname } = useLocation();
+    //const { pathname } = useLocation();
+
+
+    console.log('CATEGORY EN GROCERIES:', category);
 
 
     return (
@@ -15,9 +18,11 @@ export const Groceries = () => {
 
             <h1> Groceries </h1>
 
-            {
+            <GridCards category={category} />
+
+            {/* {
                 pathname == `/${category}` ? (<GridCards category={category} />) : (<ProductDetail category={category} />)
-            }
+            } */}
 
         </>
 
