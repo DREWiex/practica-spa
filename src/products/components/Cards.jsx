@@ -41,18 +41,25 @@ export const Cards = (product) => {
       {
         pathname == `/product/${id}` &&
 
-        <article id={id}>
-          <button>
+        <section className='flex-pdp'>
+
+          <button className='btn-pdp'>
             <Link to={`/${category}`}> Back </Link>
           </button>
-          <div>
-            <img src={photo} alt={title} title={title} />
-          </div>
-          <h3> {title} </h3>
-          <p> {description} </p>
-          <p> <strong>Price:</strong> {price} € </p>
-          <p> Rating: {rating} </p>
-        </article>
+
+          <article id={id} className=''>
+            <div>
+              <img src={photo} alt={title} title={title} />
+            </div>
+            <div>
+              <h3> {title} </h3>
+              <p> {description} </p>
+              <p> <strong>Price:</strong> {price} € </p>
+              <p> Rating: {rating} </p>
+            </div>
+          </article>
+
+        </section>
       }
 
       {/* BROWSER CARDS */}

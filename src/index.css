@@ -96,7 +96,7 @@ footer{
 }
 
 
-/* CARDS *************************/
+/* GRID CARDS *************************/
 
 .grid-container{
   display: grid;
@@ -116,6 +116,33 @@ footer{
 .grid-container article > *{
     padding: 5px;
     margin-bottom: 5px;
+}
+
+
+/* PDP CARDS *************************/
+
+.flex-pdp{
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.btn-pdp{
+  align-self: self-start;
+  width: 50px;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  padding: 5px;
+  margin-bottom: 5px;
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+.flex-pdp article div > *{
+  padding: 5px 0;
+  margin: 5px 0;
 }
 
 

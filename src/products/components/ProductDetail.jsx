@@ -15,11 +15,7 @@ export const ProductDetail = () => {
 
         <>
 
-            <section className="">
-
-                <Cards {...products} />
-
-            </section>
+            <Cards {...products} />
 
         </>
 
