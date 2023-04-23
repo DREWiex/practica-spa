@@ -2,13 +2,13 @@ import { Link, useParams } from 'react-router-dom';
 import { Cards } from './Cards';
 import { useFetchProducts } from '../hooks/useFetchProducts';
 
-export const ProductDetail = ({ category }) => {
+export const ProductDetail = () => {
 
-    let { id } = useParams();
+    const { category, id } = useParams(); // 'category' lo utiliza el botón de volver y el 'id' la url del fetch()
 
-    const { products } = useFetchProducts(null, id); // paso como argumento 'null' en vez de 'category' para la url del fetch() sea la del single product ('id')
+    const url = `https://dummyjson.com/products/${id}`;
 
-    console.log(category); //! category == undefined
+    const { products } = useFetchProducts(url);
 
 
     return (
@@ -16,10 +16,10 @@ export const ProductDetail = ({ category }) => {
         <>
 
             <button>
-                <Link to={`/${category}`}> Volver </Link> 
+                <Link to={`/${category}`}> Back </Link>
             </button>
 
-            <Cards {...products}/>
+            <Cards {...products} />
 
         </>
 

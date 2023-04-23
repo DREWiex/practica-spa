@@ -19,6 +19,8 @@ export const Cards = (product) => {
 
     <>
 
+      {/* PRODUCTS PAGE CARDS */}
+
       {
         pathname == `/${category}` &&
 
@@ -27,15 +29,17 @@ export const Cards = (product) => {
           <div>
             <img src={photo} alt={title} title={title} />
           </div>
-          <p> Price: {price.toLocaleString('de-DE')} € </p>
+          <p> Price: {price} € </p>
           <button data-category={category}>
-            <Link to={`/product/${id}`}> More info </Link>
+            <Link to={`/products/${category}/${id}`}> More info </Link>
           </button>
         </article>
       }
 
+      {/* PDP CARD */}
+
       {
-        pathname != `/${category}` &&
+        pathname == `/products/${category}/${id}` &&
 
         <article id={id}>
           <div>
@@ -45,6 +49,20 @@ export const Cards = (product) => {
           <p> {description} </p>
           <p> Price: {price} € </p>
           <p> Rating: {rating} </p>
+        </article>
+      }
+
+      {/* BROWSER CARDS */}
+
+      {
+        pathname == `/browser` &&
+
+        <article id={id}>
+          <h3> {title} </h3>
+          <div>
+            <img src={photo} alt={title} title={title} />
+          </div>
+          <p> Price: {price} € </p>
         </article>
       }
 

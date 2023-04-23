@@ -8,10 +8,14 @@ function App() {
     <>
 
     <header className="flex bg-dark">
+
       <p> Práctica SPA </p>
+
     </header>
+    
 
     <NavBar />
+
 
     <main className="flex">
 
@@ -19,8 +23,11 @@ function App() {
 
     </main>
 
+
     <footer className="flex bg-dark">
+      
       <p> Footer </p>
+
     </footer>
 
     </>

@@ -3,9 +3,11 @@ import { Cards } from "./Cards";
 
 export const GridCards = ({ category }) => {
 
-    const { products } = useFetchProducts(category);
+    const url = `https://dummyjson.com/products/category/${category}`;
 
-    
+    const { products } = useFetchProducts(url);
+
+
     return (
 
         <section className="grid-container">
@@ -15,7 +17,7 @@ export const GridCards = ({ category }) => {
                     <Cards {...product} key={product.id} />
                 ))
             }
-            
+
         </section>
 
     );

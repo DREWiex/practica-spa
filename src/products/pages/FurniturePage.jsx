@@ -7,8 +7,6 @@ export const FurniturePage = () => {
 
         <>
 
-            <h1>Furniture</h1>
-
             <Furniture />
 
         </>

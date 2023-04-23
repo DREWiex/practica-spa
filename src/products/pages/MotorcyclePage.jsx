@@ -7,8 +7,6 @@ export const MotorcyclePage = () => {
 
     <>
 
-      <h1>Motorcycle</h1>
-
       <Motorcycle />
 
     </>
