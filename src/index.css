@@ -98,6 +98,32 @@ a{
 }
 
 
+/* LOGIN *************************/
+
+input[name="username"],
+input[name="password"]{
+  width: 50%;
+  max-width: var(--maxwidth);
+  border: 1px solid var(--light);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.submit-login{
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  width: 50%;
+  padding: 10px 5px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  color: var(--white);
+  background-color: var(--dark);
+  cursor: pointer;
+}
+
+
 /* GRID CARDS *************************/
 
 .grid-container{
@@ -174,7 +200,7 @@ button > a{
   margin-bottom: 20px;
 }
 
-form{
+.flex-browser > form {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -182,14 +208,14 @@ form{
   border-bottom: 2px solid var(--light);
 }
 
-form > *{
+.flex-browser form > *{
   border: 1px solid var(--light);
   border-radius: 3px;
   padding: 10px;
   margin: 5px;
 }
 
-input[type="submit"]{
+.submit-browser{
   border: none;
   border-radius: 3px;
   font-family: 'Raleway', sans-serif;
@@ -328,11 +354,11 @@ input[type="submit"]{
     margin: 0 10px 0 10px; /* centrar y separar las sections del componente Browser (browser / results) */
   }
 
-  form{
+  .flex-browser > form{
     border-bottom: none;
   }
 
-  input[type="submit"]{
+  .submit-browser{
     width: 100px;
     padding: 10px 5px;
     color: var(--white);
@@ -342,15 +368,11 @@ input[type="submit"]{
   /* LOGIN *****/
   label{
     display: initial;
+    font-size: 1.2rem;
+  }
+
+  .submit-login{
+    width: 200px;
   }
 
 } /* 992px end */
-
-
-/* 1200px *************************/
-
-@media screen and (min-width:1200px) {
-
-
-
-} /* 1200px end */

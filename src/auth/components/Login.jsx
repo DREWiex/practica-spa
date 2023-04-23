@@ -37,9 +37,11 @@ export const Login = () => {
                 user.username != undefined && (<Navigate to='/products' />)
             }
 
-            <form onSubmit={handleSubmit}>
+            <form
+                className="flex"
+                onSubmit={handleSubmit}>
 
-                <label htmlFor="username"> Username </label>
+                <label htmlFor="username"><strong> Username </strong></label>
                 <input
                     type="text"
                     id="username"
@@ -47,7 +49,7 @@ export const Login = () => {
                     placeholder="Username"
                     onChange={handleChange} />
 
-                <label htmlFor="password"> Password </label>
+                <label htmlFor="password"><strong> Password </strong></label>
                 <input
                     type="password"
                     id="password"
@@ -55,7 +57,7 @@ export const Login = () => {
                     placeholder="Password"
                     onChange={handleChange} />
 
-                <input type="submit" value="Send" />
+                <input type="submit" className="submit-login" value="Send" />
 
             </form>
 

@@ -33,6 +33,7 @@ export const BrowserForm = ({ setSearch }) => {
 
                     <input
                         type="submit"
+                        className="submit-browser"
                         value="Search" />
 
                 </form>
