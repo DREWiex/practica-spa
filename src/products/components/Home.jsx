@@ -7,7 +7,9 @@ export const Home = () => {
 
         <>
 
-            <button>
+            <h1> Home </h1>
+
+            <button className='btn-login'>
                 <Link to='/login'> Login </Link>
             </button>
 

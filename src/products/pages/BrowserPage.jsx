@@ -7,8 +7,6 @@ export const BrowserPage = () => {
 
         <>
 
-            <h1>Browser</h1>
-
             <Browser />
 
         </>

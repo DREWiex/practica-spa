@@ -1,13 +1,17 @@
-import { GridProducts } from "./GridProducts";
+import { GridCards } from "./GridCards";
 
 export const Motorcycle = () => {
+
+    const category = 'motorcycle';
 
 
     return (
 
         <>
 
-            <GridProducts category={'motorcycle'} />
+            <h1>Motorcycle</h1>
+
+            <GridCards category={category} />
 
         </>
 

@@ -1,13 +1,17 @@
-import { GridProducts } from "./GridProducts";
+import { GridCards } from "./GridCards";
 
 export const Furniture = () => {
+
+    const category = 'furniture';
 
 
     return (
 
         <>
 
-            <GridProducts category={'furniture'} />
+            <h1> Furniture </h1>
+
+            <GridCards category={category} />
 
         </>
 
