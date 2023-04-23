@@ -4,7 +4,8 @@ export const getProducts = async (url, category) => {
 
   const response = await dummyFetch(url, category);
 
-  console.log(response);
+
+  console.log('CATEGORY EN GETPRODUCTS:', category);
 
 
   const { products } = response; // destructuro la respuesta para poder iterar con el map() en el else

@@ -14,6 +14,9 @@ export const Cards = (product) => {
     category
   } = product;
 
+  
+  console.log('CATEGORY EN CARDS:', category);
+
 
   return (
 
