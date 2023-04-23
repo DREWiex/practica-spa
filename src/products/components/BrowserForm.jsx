@@ -19,14 +19,14 @@ export const BrowserForm = ({ setSearch }) => {
 
         <>
 
-            <h2>Browser</h2>
+            <h2>Products browser</h2>
 
             <form onSubmit={handleSubmit}>
 
                 <input
                     type="text"
                     name="search"
-                    placeholder="Search a product"
+                    placeholder="Search here…"
                     onChange={handleChange} />
 
                 <input

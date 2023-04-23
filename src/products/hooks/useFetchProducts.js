@@ -5,8 +5,6 @@ export const useFetchProducts = (url, search) => {
 
     const [products, setProducts] = useState([]);
 
-    console.log(search);
-
 
     const fetchingProducts = async () => {
 
