@@ -19,11 +19,11 @@ export const useFetchProducts = (url, search) => {
 
         fetchingProducts();
 
-    }, [search]); // además de cuando se monten la primera vez los componentes que utilizan el fetch(), también quiero que se invoque 'fetchingProducts()' cuando haya una modificación en el estado 'search', es decir, en cada búsqueda que se haga
+    }, [search]); // además de cuando se monten la primera vez los componentes que utilizan el fetch(), también se invocará 'fetchingProducts()' cuando haya una modificación en el estado 'search', es decir, en cada búsqueda que se haga
 
 
-    return{
-        products // devuelve el estado, que es el objeto de la respuesta del fetch()
+    return {
+        products // devuelve el estado ('products'), que es el objeto de la respuesta del fetch()
     };
 
 };
