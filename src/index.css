@@ -308,14 +308,12 @@ button > a{
 @media screen and (min-width:768px) {
 
   /* GRID CARDS *****/
-
   .grid-container{
     grid-template-columns: repeat(2, 1fr);
   }
 
 
   /* PDP CARDS *****/
-
   .flex-pdp article {
     display: flex;
     flex-direction: row;
