@@ -2,18 +2,23 @@
 
 :root{
   --white: #ffffff;
-  --light: #b0d6e1;
+  --light: #edebeb;
   --dark: #1a212a;
-  --primary: #342fc2;
-  --secondary: #a0353f;
-  --info: #f8991c;
-  --success: #0aa360;
-  --warning: #e1cb0a;
-  --danger: #ef2004;
 
+  /* MONOCHROMATIC */
+  --lightgreen: #91c62c;
+  --mediumgreen: #3c8e03;
+  --darkgreen: #1e3902;
+
+  --darkred: #1a0400;
+  --mediumred: #9a1503;
+  --lightred: #ff5741;
+
+  /* SIZES */
   --headerheight: 70px;
   --navheight: 40px;
   --footerheight: 40px;
+  --maxwidth: 1200px;
 }
 
 *{
@@ -21,6 +26,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+
+/* ELEMENTOS *************************/
 
 body{
   font-family: 'Raleway', sans-serif;
@@ -35,38 +43,32 @@ header > p{
   font-size: 2rem;
 }
 
-a{
-  text-decoration: none;
-  color: var(--dark);
-}
-
 main{
   min-height: calc(100vh - (var(--headerheight) + var(--footerheight) + var(--navheight)));
 }
 
 h1{
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 80%;
+  max-width: var(--maxwidth);
+  padding-bottom: 8px;
   margin: 20px 0;
-}
-
-article > button{
-  width: 100%;
+  border-bottom: 2px solid var(--light);
 }
 
 img{
   width: 100%;
 }
 
+label{
+  display: none;
+}
+
 footer{
   height: var(--footerheight);
 }
 
-.flex{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
 
 /* NAV *************************/
 
@@ -90,20 +92,54 @@ footer{
   padding: 0 10px;
 }
 
-/* CARDS *************************/
+a{
+  text-decoration: none;
+  color: var(--dark);
+}
+
+
+/* LOGIN *************************/
+
+input[name="username"],
+input[name="password"]{
+  width: 50%;
+  max-width: var(--maxwidth);
+  border: 1px solid var(--light);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.submit-login{
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  width: 50%;
+  padding: 10px 5px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  color: var(--white);
+  background-color: var(--dark);
+  cursor: pointer;
+}
+
+
+/* GRID CARDS *************************/
 
 .grid-container{
   display: grid;
   grid-template-columns: 1fr;
   height: calc(100% - (var(--headerheight) + var(--navheight)));
   width: 80%;
-  margin: 0 auto;
+  max-width: var(--maxwidth);
+  gap: 20px;
+  margin: 0 auto 40px;
 }
 
 .grid-container > article{
     padding: 20px;
-    margin: 0 auto 40px;
-    border: 1px solid var(--light);
+    border: 2px solid var(--light);
+    border-radius: 5px;
 }
 
 .grid-container article > *{
@@ -111,7 +147,232 @@ footer{
     margin-bottom: 5px;
 }
 
+article > button{
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  color: var(--white);
+  background-color: var(--dark);
+}
+
+button > a{
+  color: var(--white);
+}
+
+
+/* PDP CARDS *************************/
+
+.flex-pdp{
+  display: flex;
+  width: 90%;
+  max-width: var(--maxwidth);
+  flex-direction: column;
+  margin: 20px auto;
+}
+
+.flex-pdp article div > *{
+  padding: 5px 0;
+  margin: 5px 0;
+}
+
+.flex-pdp article div h3{
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+
+/* BROWSER CARDS *************************/
+
+.flex-browser{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: var(--maxwidth);
+  margin-bottom: 40px;
+}
+
+.flex-browser > h2{
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.flex-browser > form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--light);
+}
+
+.flex-browser form > *{
+  border: 1px solid var(--light);
+  border-radius: 3px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.submit-browser{
+  border: none;
+  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  padding: 10px 5px;
+  color: var(--white);
+  background-color: var(--dark);
+  cursor: pointer;
+}
+
+.box-results{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 75px;
+  border-radius: 5px;
+}
+
+.success{
+  color: var(--darkgreen);
+  background-color: var(--lightgreen);
+  border: 1px solid var(--mediumgreen);
+}
+
+.danger{
+  color: var(--darkred);
+  background-color: var(--lightred);
+  border: 1px solid var(--mediumred);
+}
+
+.flex-results{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 2px solid var(--light);
+  border-radius: 5px;
+}
+
+.flex-results > *{
+  padding: 5px 20px;
+  margin-bottom: 5px;
+}
+
+.flex-results h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+
+/* CLASES COMPARTIDAS *************************/
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn-submit{
+  align-self: self-start;
+  width: 70px;
+  border: none;
+  border-radius: 3px;
+  font-family: 'Raleway', sans-serif;
+  padding: 10px 5px;
+  margin-bottom: 10px;
+  color: var(--white);
+  background-color: var(--dark);
+}
+
 .bg-dark{
   color: var(--white);
   background-color: var(--dark);
 }
+
+.text-center{
+  text-align: center;
+}
+
+
+/* ***************************************/
+/* MEDIA QUERIES *************************/
+/* ***************************************/
+
+/* 768px *************************/
+
+@media screen and (min-width:768px) {
+
+  /* GRID CARDS *****/
+
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  /* PDP CARDS *****/
+
+  .flex-pdp article {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .div-pdp-pic{
+    width: 60%;
+    margin-right: 20px;
+  }
+
+  .div-pdp-text{
+    width: 40%;
+    margin-left: 20px;
+  }
+
+} /* 768px end */
+
+
+/* 992px *************************/
+
+@media screen and (min-width:992px) {
+
+  /* GRID CARDS *****/
+  .grid-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* BROWSER CARDS *****/
+  div[class="flex"]{
+    flex-direction: row;
+    width: 80%;
+    align-items: self-start;
+  }
+
+  .flex-browser{
+    margin: 0 10px 0 10px; /* centrar y separar las sections del componente Browser (browser / results) */
+  }
+
+  .flex-browser > form{
+    border-bottom: none;
+  }
+
+  .submit-browser{
+    width: 100px;
+    padding: 10px 5px;
+    color: var(--white);
+    background-color: var(--dark);
+  }
+
+  /* LOGIN *****/
+  label{
+    display: initial;
+    font-size: 1.2rem;
+  }
+
+  .submit-login{
+    width: 200px;
+  }
+
+} /* 992px end */

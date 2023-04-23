@@ -25,13 +25,13 @@ export const Cards = (product) => {
         pathname == `/${category}` &&
 
         <article id={id}>
-          <h3> {title} </h3>
+          <h3 className='text-center'> {title} </h3>
           <div>
             <img src={photo} alt={title} title={title} />
           </div>
-          <p> Price: {price} € </p>
+          <p> <strong>Price:</strong> {price} € </p>
           <button data-category={category}>
-            <Link to={`/products/${category}/${id}`}> More info </Link>
+            <Link to={`/product/${id}`}> More info </Link>
           </button>
         </article>
       }
@@ -39,17 +39,27 @@ export const Cards = (product) => {
       {/* PDP CARD */}
 
       {
-        pathname == `/products/${category}/${id}` &&
+        pathname == `/product/${id}` &&
 
-        <article id={id}>
-          <div>
-            <img src={photo} alt={title} title={title} />
-          </div>
-          <h3> {title} </h3>
-          <p> {description} </p>
-          <p> Price: {price} € </p>
-          <p> Rating: {rating} </p>
-        </article>
+        <section className='flex-pdp'>
+
+          <button className='btn-submit'>
+            <Link to={`/${category}`}> Back </Link>
+          </button>
+
+          <article id={id} className=''>
+            <div className='div-pdp-pic'>
+              <img src={photo} alt={title} title={title} />
+            </div>
+            <div className='div-pdp-text'>
+              <h3> {title} </h3>
+              <p> {description} </p>
+              <p> <strong>Price:</strong> {price} € </p>
+              <p> <strong>Rating:</strong> {rating} </p>
+            </div>
+          </article>
+
+        </section>
       }
 
       {/* BROWSER CARDS */}
@@ -57,12 +67,13 @@ export const Cards = (product) => {
       {
         pathname == `/browser` &&
 
-        <article id={id}>
-          <h3> {title} </h3>
+        <article id={id} className='flex-results'>
+          <h3 className='text-center'> {title} </h3>
           <div>
             <img src={photo} alt={title} title={title} />
           </div>
-          <p> Price: {price} € </p>
+          <p> <strong>Price:</strong> {price} € </p>
+          <p> <strong>Rating:</strong> {rating} </p>
         </article>
       }
 

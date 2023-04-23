@@ -15,19 +15,19 @@ export const BrowserResults = ({ search }) => {
 
     <>
 
-      <section>
+      <section className="flex-browser">
 
         <h2>Results</h2>
 
         {
-          search == '' ? <p> Search a product! </p> :
+          search == '' ? <div className="box-results success"> Search a product! </div> :
             results.map(product => (
               <Cards {...product} key={product.id} />
             ))
         }
 
         {
-          search != '' && results.length == 0 && <p> No products were found. </p>
+          search != '' && results.length == 0 && <div className="box-results danger"> No products were found. </div>
         }
 
       </section>
