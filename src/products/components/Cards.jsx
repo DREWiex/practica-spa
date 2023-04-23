@@ -43,7 +43,7 @@ export const Cards = (product) => {
 
         <section className='flex-pdp'>
 
-          <button className='btn-pdp'>
+          <button className='btn-submit'>
             <Link to={`/${category}`}> Back </Link>
           </button>
 

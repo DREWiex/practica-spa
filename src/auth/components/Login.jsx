@@ -44,6 +44,7 @@ export const Login = () => {
                     type="text"
                     id="username"
                     name="username"
+                    placeholder="Username"
                     onChange={handleChange} />
 
                 <label htmlFor="password"> Password </label>
@@ -51,6 +52,7 @@ export const Login = () => {
                     type="password"
                     id="password"
                     name="password"
+                    placeholder="Password"
                     onChange={handleChange} />
 
                 <input type="submit" value="Send" />

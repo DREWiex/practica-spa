@@ -19,21 +19,25 @@ export const BrowserForm = ({ setSearch }) => {
 
         <>
 
-            <h2>Products browser</h2>
+            <section className="flex-browser">
 
-            <form onSubmit={handleSubmit}>
+                <h2>Products browser</h2>
 
-                <input
-                    type="text"
-                    name="search"
-                    placeholder="Search here…"
-                    onChange={handleChange} />
+                <form onSubmit={handleSubmit}>
 
-                <input
-                    type="submit"
-                    value="Search" />
+                    <input
+                        type="text"
+                        name="search"
+                        placeholder="Search here…"
+                        onChange={handleChange} />
 
-            </form>
+                    <input
+                        type="submit"
+                        value="Search" />
+
+                </form>
+
+            </section>
 
         </>
 
