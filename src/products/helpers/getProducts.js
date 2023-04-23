@@ -1,6 +1,6 @@
 import { dummyFetch } from '../api/dummyFetch';
 
-export const getProducts = async (url, category) => {
+export const getProducts = async (url) => {
 
   const response = await dummyFetch(url);
 
@@ -16,7 +16,7 @@ export const getProducts = async (url, category) => {
       photo: response.thumbnail,
       price: response.price,
       rating: response.rating,
-      category,
+      category: response.category
     };
 
   } else {
@@ -28,7 +28,7 @@ export const getProducts = async (url, category) => {
       photo: item.thumbnail,
       price: item.price,
       rating: item.rating,
-      category,
+      category: item.category
     }));
 
     return product; // devuelve un array de objetos por cada iteración de la categoría

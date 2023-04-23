@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../helpers/getProducts";
 
-export const useFetchProducts = (url, category) => {
+export const useFetchProducts = (url, category) => { //! aquí me podría interesar pasar el search, en caso de que la category la pueda rescatar el fetch directo
 
     const [products, setProducts] = useState([]);
 
