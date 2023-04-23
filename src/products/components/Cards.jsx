@@ -14,9 +14,6 @@ export const Cards = (product) => {
     category
   } = product;
 
-  
-  console.log('CATEGORY EN CARDS:', category);
-
 
   return (
 
@@ -30,7 +27,7 @@ export const Cards = (product) => {
           <div>
             <img src={photo} alt={title} title={title} />
           </div>
-          <p> Price: {price.toLocaleString('de-DE')} € </p>
+          <p> Price: {price} € </p>
           <button data-category={category}>
             <Link to={`/products/${category}/${id}`}> More info </Link>
           </button>
@@ -46,7 +43,7 @@ export const Cards = (product) => {
           </div>
           <h3> {title} </h3>
           <p> {description} </p>
-          <p> Price: {price} € </p> //! pendiente añadir .toLocaleString('de-DE')
+          <p> Price: {price} € </p>
           <p> Rating: {rating} </p>
         </article>
       }

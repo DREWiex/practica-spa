@@ -2,17 +2,14 @@ import { dummyFetch } from '../api/dummyFetch';
 
 export const getProducts = async (url, category) => {
 
-  const response = await dummyFetch(url, category);
+  const response = await dummyFetch(url);
+
+  const { products } = response; // destructuro la respuesta para iterar con el map() en el else
 
 
-  console.log('CATEGORY EN GETPRODUCTS:', category);
+  if (location.href.includes('products')) { // aplica únicamente para la pdp (product detail page)
 
-
-  const { products } = response; // destructuro la respuesta para poder iterar con el map() en el else
-
-  if (!category) {
-
-    const product = { // como solo "pintaré" un producto en el componente Cards, devuelvo un único objeto, ya que no necesito iterar
+    return { // como solo renderizaré un producto en el componente Cards, devuelvo un único objeto, ya que no necesito iterar
       id: response.id,
       title: response.title,
       description: response.description,
@@ -21,8 +18,6 @@ export const getProducts = async (url, category) => {
       rating: response.rating,
       category,
     };
-
-    return product;
 
   } else {
 

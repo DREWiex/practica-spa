@@ -1,8 +1,6 @@
 
 export const dummyFetch = async (url) => {
 
-    console.log('FETCH URL:', url);
-
     try {
 
         const request = await fetch(url, {

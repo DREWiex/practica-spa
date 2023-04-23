@@ -6,8 +6,6 @@ export const useFetchProducts = (url, category) => {
     const [products, setProducts] = useState([]);
 
     //! importar estado de search con useContext y pasárselo al useEffect en dependencia
-
-    console.log('CATEGORY EN USEFETCHPRODUCTS:', category);
     
 
     const fetchingProducts = async () => {
@@ -23,7 +21,7 @@ export const useFetchProducts = (url, category) => {
 
         fetchingProducts();
 
-    }, [category]); //!USEEFFECT
+    }, [category]);
 
 
     return{
