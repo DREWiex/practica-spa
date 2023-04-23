@@ -48,14 +48,14 @@ export const Cards = (product) => {
           </button>
 
           <article id={id} className=''>
-            <div>
+            <div className='div-pdp-pic'>
               <img src={photo} alt={title} title={title} />
             </div>
-            <div>
+            <div className='div-pdp-text'>
               <h3> {title} </h3>
               <p> {description} </p>
               <p> <strong>Price:</strong> {price} € </p>
-              <p> Rating: {rating} </p>
+              <p> <strong>Rating:</strong> {rating} </p>
             </div>
           </article>
 
