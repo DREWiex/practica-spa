@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { getProducts } from "../helpers/getProducts";
 
-export const useFetchProducts = (url, category) => { //! aquí me podría interesar pasar el search, en caso de que la category la pueda rescatar el fetch directo
+export const useFetchProducts = (url, search) => {
 
     const [products, setProducts] = useState([]);
 
-    //! importar estado de search con useContext y pasárselo al useEffect en dependencia
-    
+    console.log(search);
+
 
     const fetchingProducts = async () => {
 
-        const prods = await getProducts(url, category);
+        const prods = await getProducts(url);
 
         setProducts(prods);
 
@@ -21,7 +21,7 @@ export const useFetchProducts = (url, category) => { //! aquí me podría intere
 
         fetchingProducts();
 
-    }, [category]);
+    }, [search]); // además de cuando se monten la primera vez los componentes que utilizan el fetch(), también quiero que se invoque 'fetchingProducts()' cuando haya una modificación en el estado 'search', es decir, en cada búsqueda que se haga
 
 
     return{

@@ -5,7 +5,7 @@ export const GridCards = ({ category }) => {
 
     const url = `https://dummyjson.com/products/category/${category}`;
 
-    const { products } = useFetchProducts(url, category);
+    const { products } = useFetchProducts(url);
 
 
     return (

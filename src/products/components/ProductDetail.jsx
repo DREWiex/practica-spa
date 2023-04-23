@@ -4,12 +4,11 @@ import { useFetchProducts } from '../hooks/useFetchProducts';
 
 export const ProductDetail = () => {
 
-    const { category, id } = useParams();
+    const { category, id } = useParams(); // 'category' lo utiliza el botón de volver y el 'id' la url del fetch()
 
     const url = `https://dummyjson.com/products/${id}`;
 
-
-    const { products } = useFetchProducts(url, category);
+    const { products } = useFetchProducts(url);
 
 
     return (
@@ -17,7 +16,7 @@ export const ProductDetail = () => {
         <>
 
             <button>
-                <Link to={`/${category}`}> Volver </Link>
+                <Link to={`/${category}`}> Back </Link>
             </button>
 
             <Cards {...products} />
