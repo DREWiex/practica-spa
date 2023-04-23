@@ -100,6 +100,19 @@ a{
 
 /* LOGIN *************************/
 
+.btn-login{
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  width: 10%;
+  padding: 10px 5px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 3px;
+  color: var(--white);
+  background-color: var(--dark);
+  cursor: pointer;
+}
+
 input[name="username"],
 input[name="password"]{
   width: 50%;
