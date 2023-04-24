@@ -7,28 +7,28 @@ function App() {
 
     <>
 
-    <header className="flex bg-dark">
+      <header className="flex bg-dark">
 
-      <p> Práctica SPA </p>
+        <p> Práctica SPA </p>
 
-    </header>
-    
-
-    <NavBar />
+      </header>
 
 
-    <main className="flex">
-
-    <AppRouters />
-
-    </main>
+      <NavBar />
 
 
-    <footer className="flex bg-dark">
-      
-      <p> Footer </p>
+      <main className="flex">
 
-    </footer>
+        <AppRouters />
+
+      </main>
+
+
+      <footer className="flex bg-dark">
+
+        <p> Footer </p>
+
+      </footer>
 
     </>
 
