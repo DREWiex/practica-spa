@@ -63,6 +63,7 @@ img{
 
 label{
   display: none;
+  font-size: 1.2rem;
 }
 
 footer{
@@ -88,6 +89,10 @@ footer{
   flex-wrap: wrap;
 }
 
+.nav-li p{
+  font-weight: 700;
+}
+
 .nav-li > *{
   padding: 0 10px;
 }
@@ -103,7 +108,7 @@ a{
 .btn-login{
   font-family: 'Raleway', sans-serif;
   font-size: 0.9rem;
-  width: 10%;
+  width: 80px;
   padding: 10px 5px;
   margin-top: 10px;
   border: none;
@@ -149,18 +154,18 @@ input[name="password"]{
   margin: 0 auto 40px;
 }
 
-.grid-container > article{
+.grid-item{
     padding: 20px;
     border: 2px solid var(--light);
     border-radius: 5px;
 }
 
-.grid-container article > *{
+.grid-item > *{
     padding: 5px;
     margin-bottom: 5px;
 }
 
-article > button{
+.grid-item > button{
   font-family: 'Raleway', sans-serif;
   width: 100%;
   border: none;
@@ -379,7 +384,6 @@ button > a{
   /* LOGIN *****/
   label{
     display: initial;
-    font-size: 1.2rem;
   }
 
   .submit-login{
