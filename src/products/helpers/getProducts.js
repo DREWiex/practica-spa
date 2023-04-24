@@ -6,6 +6,8 @@ export const getProducts = async (url) => {
 
   const { products } = response; // destructuro la respuesta para iterar con el map() en el else
 
+  //! condicional: si no es un array, lo meto dentro de un array; envío el mismo objeto
+  //! enviar el objeto en un array y destructurar donde necesito solo uno en su componente (PDP, por ej.)
 
   if (location.href.includes('product')) { // aplica únicamente para la pdp (product detail page)
 

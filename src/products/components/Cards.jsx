@@ -24,7 +24,7 @@ export const Cards = (product) => {
       {
         pathname == `/${category}` &&
 
-        <article id={id}>
+        <article id={id} className='grid-item'>
           <h3 className='text-center'> {title} </h3>
           <div>
             <img src={photo} alt={title} title={title} />
