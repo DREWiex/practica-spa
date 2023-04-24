@@ -1,6 +1,10 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { UserContext } from '../auth/context/UserContext';
 
 export const NavBar = () => {
+
+    const { user } = useContext(UserContext);
 
 
     return (
@@ -18,6 +22,9 @@ export const NavBar = () => {
                 </div>
 
                 <div className='nav-li'>
+                    {
+                        user.username && <p> ¡Hola, {user.username}! </p>
+                    }
                     <li><Link to='/logout'>Logout</Link></li>
                 </div>
 
